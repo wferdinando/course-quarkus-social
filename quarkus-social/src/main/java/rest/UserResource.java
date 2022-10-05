@@ -1,9 +1,9 @@
-package io.github.wferdinando.quarkussocial.domain.rest;
+package rest;
 
 import io.github.wferdinando.quarkussocial.domain.model.User;
 import io.github.wferdinando.quarkussocial.domain.repository.UserRepository;
-import io.github.wferdinando.quarkussocial.domain.rest.dto.CreateUserRequest;
-import io.github.wferdinando.quarkussocial.domain.rest.dto.ResponseError;
+import rest.dto.CreateUserRequest;
+import rest.dto.ResponseError;
 import io.quarkus.hibernate.orm.panache.PanacheQuery;
 
 import javax.inject.Inject;

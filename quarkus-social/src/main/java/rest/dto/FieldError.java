@@ -1,4 +1,4 @@
-package io.github.wferdinando.quarkussocial.domain.rest.dto;
+package rest.dto;
 
 public class FieldError {
 

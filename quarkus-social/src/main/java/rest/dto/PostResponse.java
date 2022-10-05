@@ -1,10 +1,8 @@
-package io.github.wferdinando.quarkussocial.domain.rest.dto;
+package rest.dto;
 
 import io.github.wferdinando.quarkussocial.domain.model.Post;
 import lombok.Data;
-import org.jboss.logging.annotations.Pos;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Data
