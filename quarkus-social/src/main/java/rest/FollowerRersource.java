@@ -36,12 +36,12 @@ public class FollowerRersource {
 
         if(userId.equals(followerRequest.getFollowerId())){
             return Response.status(Response.Status.CONFLICT)
-                    .entity("You can't follower yourself").build();
+                    .entity("You can't follower yourself!").build();
         }
 
         var user = userRepository.findById(userId);
 
-        if (userId == null) {
+        if (user == null) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
 
@@ -64,7 +64,7 @@ public class FollowerRersource {
     public Response listFollowers(@PathParam("userId") Long userId){
 
         var user = userRepository.findById(userId);
-        if (userId == null) {
+        if (user == null) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
 
@@ -83,7 +83,7 @@ public class FollowerRersource {
     @Transactional
     public Response unfollowUser(@PathParam("userId") Long userId, @QueryParam("followerId") Long followerId){
         var user = userRepository.findById(userId);
-        if (userId == null) {
+        if (user == null) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
 
